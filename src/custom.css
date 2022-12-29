@@ -1,0 +1,17 @@
+.device-card{
+    display: inline-block !important;
+    width: 250px;
+    height: 150px;
+    box-shadow: 1px 10px 20px rgb(0 0 0 / 10%);
+    margin: 1rem;
+}
+
+.form-switch{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.icon{
+    height: 30px;
+}
