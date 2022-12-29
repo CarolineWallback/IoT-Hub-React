@@ -18,7 +18,7 @@ export const DeviceProvider = ({children}) => {
     }
 
     const invokeMethodAsync = async () => {
-        const result = await fetch(baseUrl + '/invoke?code=C6ekWslmm2CwTYHqDz0UQwzKNyOv9WXf-ql34yc3Si8VAzFu_pc5Og==', {
+        await fetch(baseUrl + '/invoke?code=C6ekWslmm2CwTYHqDz0UQwzKNyOv9WXf-ql34yc3Si8VAzFu_pc5Og==', {
             method: 'post',
             headers: {
                 'Content-Type' : 'application/json'

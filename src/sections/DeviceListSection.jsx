@@ -7,7 +7,7 @@ const DeviceListSection = () => {
 
     useEffect(() => {
         getDevicesAsync()
-    }, [])
+    }, [getDevicesAsync])
 
     return(
         <div className="container text-center cards-columns">

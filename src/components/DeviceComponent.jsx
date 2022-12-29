@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDeviceContext } from "../contexts/DeviceContext";
 import '../custom.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,10 +8,10 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 const DeviceComponent = ({item}) => {
 
     const {invokeMethod, invokeMethodAsync, setInvokeMethod} = useDeviceContext()
-    const {methodName, setMethodName} = useState("off")
+    // const {methodName, setMethodName} = useState("off")
 
     const sendInvokeMethod = async () => {
-        setInvokeMethod({deviceId: item.DeviceId, methodName: methodName, payload: '{}'})
+        setInvokeMethod({deviceId: item.DeviceId, methodName: 'on', payload: '{}'})
         console.log(invokeMethod);
         invokeMethodAsync()
     }
