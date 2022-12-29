@@ -25,8 +25,6 @@ export const DeviceProvider = ({children}) => {
             },
             body: JSON.stringify(invokeMethod)
         })
-
-        // return await result.json();
     }
 
     return <DeviceContext.Provider value={{devices, invokeMethod, setInvokeMethod, getDevicesAsync, invokeMethodAsync}}>
