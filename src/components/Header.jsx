@@ -23,8 +23,15 @@ const useIsSignedIn = () => {
   }
 
 const Header = () => {
+  
     return(
+      <>
         <div className='text-end'> <Login/> </div>
+        <div className='container text-center'>
+
+         {useIsSignedIn === true ? "" : ""}
+        </div>
+      </>
     )
 }
 
