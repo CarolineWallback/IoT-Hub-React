@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDeviceContext } from "../contexts/DeviceContext";
 import '../custom.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,7 +10,7 @@ const DeviceComponent = ({item}) => {
     const {invokeMethod, invokeMethodAsync, setInvokeMethod} = useDeviceContext()
 
     const sendInvokeMethod = async () => {
-        setInvokeMethod({deviceId: item.DeviceId, methodName: item.LightState ? "off" : "off", payload: '{}'})
+        setInvokeMethod({deviceId: item.DeviceId, methodName: item.LightState? "off" : "on" , payload: '{}'})
         console.log(invokeMethod);
         invokeMethodAsync()
     }
