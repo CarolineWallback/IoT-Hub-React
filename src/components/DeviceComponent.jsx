@@ -10,7 +10,7 @@ const DeviceComponent = ({item}) => {
     const {invokeMethod, invokeMethodAsync, setInvokeMethod} = useDeviceContext()
 
     const sendInvokeMethod = async () => {
-        setInvokeMethod({deviceId: item.DeviceId, methodName: item.LightState? "off" : "on" , payload: '{}'})
+        setInvokeMethod({deviceId: item.DeviceId, methodName: "toggle" , payload: '{}'})
         console.log(invokeMethod);
         invokeMethodAsync()
     }
